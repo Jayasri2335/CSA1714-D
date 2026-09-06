@@ -1,1 +1,17 @@
 
+% Birds database
+
+bird(sparrow).
+bird(parrot).
+bird(eagle).
+bird(penguin).
+bird(ostrich).
+
+% Birds that cannot fly
+cannot_fly(penguin).
+cannot_fly(ostrich).
+
+% Rule to determine flying birds
+can_fly(X) :-
+    bird(X),
+    \+ cannot_fly(X).
